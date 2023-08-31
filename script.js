@@ -46,13 +46,20 @@ function singleRound(playerSelection, computerSelection){
         case 0:
             output += "Draw! They're the same!"
     }
-    
+    console.log(output)
     return output;
 }
 
 function game(){
+    /* REMOVING THE LOGIC FOR PLAYING EXACTLY FIVE ROUNDS..
     for(let i = 0; i < 5; i++){
         let playerInput = prompt("Rock Paper Scissors?");
         console.log(singleRound(calculatePlayer(playerInput), getComputerChoice()));
     }
+    */
 }
+
+//Event listener for Button..
+const buttons = document.querySelectorAll('.input');
+console.log(buttons);
+buttons.forEach(button => button.addEventListener('click', singleRound(button.value,getComputerChoice())))
