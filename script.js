@@ -6,9 +6,11 @@ Instead let's take each value into a #instead.. 0 -> rock, 1 -> paper, 2 -> scis
 //Event listener for Button..
 const buttons = document.querySelectorAll('.input');
 console.log(buttons);
+let results = document.querySelector('.results');
+let cScore = document.querySelector('.c-score');
+let pScore = document.querySelector('p-score');
 buttons.forEach(button => button.addEventListener('click', function (){
-    console.log(singleRound(calculatePlayer(button.innerHTML), getComputerChoice()));
-    console.log(button.innerHTML);
+    results.innerHTML = singleRound(calculatePlayer(button.innerHTML), getComputerChoice());
 }));
 
 function getComputerChoice(){
@@ -53,6 +55,7 @@ function singleRound(playerSelection, computerSelection){
         case -2:    
         case 1:
             output += "You Win! " + translate(playerSelection) + " beats " + translate(computerSelection);
+            pScore.innerHTML = parseInt(pScore.innerHTML)+1;
             break;
         case 0:
             output += "Draw! They're the same!"
