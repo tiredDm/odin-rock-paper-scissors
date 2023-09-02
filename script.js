@@ -8,9 +8,16 @@ const buttons = document.querySelectorAll('.input');
 console.log(buttons);
 let results = document.querySelector('.results');
 let cScore = document.querySelector('.c-score');
-let pScore = document.querySelector('p-score');
+let pScore = document.querySelector('.p-score');
+let winner = document.querySelector('.winner');
 buttons.forEach(button => button.addEventListener('click', function (){
     results.innerHTML = singleRound(calculatePlayer(button.innerHTML), getComputerChoice());
+    if(parseInt(pScore.innerHTML) > parseInt(cScore.innerHTML) && parseInt(pScore.innerHTML) >= 5){
+        winner.innerHTML = 'Player Wins! You got to 5 first!';
+    }
+    if(parseInt(cScore.innerHTML) > parseInt(pScore.innerHTML) && parseInt(cScore.innerHTML) >= 5){
+        winner.innerHTML = 'Computer Wins! The Computer got to 5 first!';
+    }
 }));
 
 function getComputerChoice(){
@@ -51,6 +58,7 @@ function singleRound(playerSelection, computerSelection){
         case -1:
         case 2:
             output += "You Lose! " + translate(computerSelection) + " beats " + translate(playerSelection);
+            cScore.innerHTML = parseInt(cScore.innerHTML)+1;
             break;
         case -2:    
         case 1:
