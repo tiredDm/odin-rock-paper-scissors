@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+img {
+    width: 15vw;
+    height: auto;
+}
+
+button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.scores{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:xx-large;
+    font-weight: bold;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 60vw;
+   
+}
+
+.output-section{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.winner{
+    font-size: x-large;
+    font-weight: bolder;
+}

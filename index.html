@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-    <div class="p-score">0</div>
-    <div class="c-score">0</div>
-    <button class="input">Rock</button>
-    <button class="input">Paper</button>
-    <button class="input">Scissors</button>
-    <div class="results"></div>
-    <div class="winner"></div>
+    <h1>ROCK PAPER SCISSORS</h1>
+    <div class="scores">
+        <div class="section">
+            <div class="Player">Player</div>
+            <div class="p-score">0</div>
+        </div>
+        
+        <div class="section">
+            <div class="Computer">Computer</div>
+            <div class="c-score">0</div> 
+        </div>
+    </div>
+    
+    <div class="buttons">
+        <button class="input"><img src="img/rock.svg"> Rock</button>
+        <button class="input"><img src="img/paper.svg"> Paper</button>
+        <button class="input"><img src="img/scissors.svg"> Scissors</button>
+    </div>
+    
+    <div class= "output-section">
+        <div class="results"></div>
+        <div class="winner"></div>
+    </div>
+    
 </body>
 </html>

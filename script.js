@@ -5,13 +5,15 @@ Instead let's take each value into a #instead.. 0 -> rock, 1 -> paper, 2 -> scis
 
 //Event listener for Button..
 const buttons = document.querySelectorAll('.input');
+const buttons2 =  document.querySelector('.buttons');
 console.log(buttons);
 let results = document.querySelector('.results');
 let cScore = document.querySelector('.c-score');
 let pScore = document.querySelector('.p-score');
 let winner = document.querySelector('.winner');
 buttons.forEach(button => button.addEventListener('click', function (){
-    results.innerHTML = singleRound(calculatePlayer(button.innerHTML), getComputerChoice());
+    console.log(button.innerHTML.split(' ')[2]);
+    results.innerHTML = singleRound(calculatePlayer(button.innerHTML.split(' ')[2]), getComputerChoice());
     if(parseInt(pScore.innerHTML) > parseInt(cScore.innerHTML) && parseInt(pScore.innerHTML) >= 5){
         winner.innerHTML = 'Player Wins! You got to 5 first!';
     }
